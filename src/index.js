@@ -17,6 +17,8 @@ export const resetStore = () => {
 }
 resetStore()
 
+console.log(store)
+
 ReactDOM.render(
   <Provider store={store}>
     <App />

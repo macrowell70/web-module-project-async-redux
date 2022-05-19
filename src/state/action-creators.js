@@ -7,10 +7,14 @@ export function fetchActivity() {
     return function(dispatch) {
         axios.get(url)
         .then(res => {
-            console.log(res)
+            const activity = res.data
+            dispatch({
+                type: types.ADD_ACTIVITY,
+                payload: activity
+            })
         })
         .catch(err => {
-
+            console.log(err)
         })
     }
 }
