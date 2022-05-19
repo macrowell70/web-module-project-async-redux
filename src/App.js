@@ -1,12 +1,18 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+import { connect } from 'react-redux';
+
+import * as actions from './state/action-creators';
+
+function App(props) {
+  console.log(props)
   return (
     <div className="App">
-      Async Redux Project
+      <h1>Bored? Find an Activity!</h1>
+      <button onClick={() => props.fetchActivity()}>Get Activity</button>
     </div>
   );
 }
 
-export default App;
+export default connect(st => st, actions)(App);
