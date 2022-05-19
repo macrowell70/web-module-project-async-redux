@@ -3,7 +3,7 @@ import * as types from './action-types'
 
 
 const initialActivity = {}
-function addActivity(activityState = initialActivity, action) {
+function activity(activityState = initialActivity, action) {
       switch (action.type) {
           case types.ADD_ACTIVITY: {
               return activityState = action.payload
@@ -14,7 +14,7 @@ function addActivity(activityState = initialActivity, action) {
     }
 
 export default combineReducers({
-    addActivity,
+    activity,
 })
 
 

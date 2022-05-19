@@ -10,7 +10,7 @@ function App(props) {
     <div className="App">
       <h1>Bored? Find an Activity!</h1>
       <button onClick={() => props.fetchActivity()}>Get Activity</button>
-      <p>{props.addActivity.activity}</p>
+      <p>{props.activity.activity}</p>
     </div>
   );
 }
